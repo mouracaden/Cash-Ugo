@@ -54,6 +54,28 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #4b5563; 
       }
+
+      /* PRINT STYLES - FORCE INVOICE LOOK */
+      @media print {
+        @page {
+          size: letter; /* 8.5 x 11 inches (Canada/US) */
+          margin: 0.5in; /* Marges adaptées au format Letter */
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        #root {
+          background-color: white !important;
+          color: black !important;
+        }
+        /* Hide scrollbars during print */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      }
     </style>
   <script type="importmap">
 {

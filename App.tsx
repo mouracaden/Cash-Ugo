@@ -168,10 +168,10 @@ const App: React.FC = () => {
   if (!isLoaded) return null;
 
   return (
-    <div className="min-h-screen bg-carbon-950 text-gray-100 font-sans selection:bg-money-500 selection:text-white pb-20">
+    <div className="min-h-screen bg-carbon-950 text-gray-100 font-sans selection:bg-money-500 selection:text-white pb-20 print:bg-white print:text-black print:pb-0">
       
-      {/* Header */}
-      <header className="bg-carbon-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-md">
+      {/* Header - Hidden on Print */}
+      <header className="bg-carbon-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-md print:hidden">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="bg-money-600 p-2 rounded-lg text-white">
@@ -197,7 +197,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="p-4 md:p-8">
+      <main className="p-4 md:p-8 print:p-0 print:w-full">
         
         {isAdminOpen ? (
           <AdminPanel 
