@@ -70,7 +70,7 @@ export const Summary: React.FC<SummaryProps> = ({
                    </td>
                  </tr>
               )}
-              {activeTopics.map((topic, idx) => (
+              {activeTopics.map((topic) => (
                 <tr key={topic.id} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors print:border-gray-300">
                   {/* Explicitly set text-gray-900 to override any dark mode inheritance */}
                   <td className="py-3 font-semibold text-gray-900">{topic.title}</td>
